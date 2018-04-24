@@ -87,7 +87,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/tweets' do
-
     if !params[:content].empty?
       tweet = Tweet.create(content: params[:content])
       tweet.user = current_user
