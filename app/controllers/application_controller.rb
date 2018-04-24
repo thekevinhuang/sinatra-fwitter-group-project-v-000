@@ -121,9 +121,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/tweets/:id/edit' do
-    @tweet = Tweet.find(params[:id])
 
     if logged_in?
+      @tweet = Tweet.find(params[:id])
       if @tweet.user == current_user
         erb :'/tweets/edit_tweet'
       else
