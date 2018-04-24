@@ -1,0 +1,7 @@
+<h1> Here are all the Tweets! </h1>
+
+<ul>
+  <%@all_tweets.each do |tweet|%>
+    <li><a href="/tweets/<%=tweet.id%>"><%=tweet.content%></a></li>
+  <%end%>
+</ul>
